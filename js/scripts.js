@@ -1,18 +1,32 @@
-let pokemonList = [
-{name:"Squirtle", types: "water", height: 0.5},
-{name:"Pikachu", types: "electric", height: 0.4},
-{name:"Jigglypuff", types: ["fairy", "normal"], height: 0.5}
+let pokemonRepository = (function () {
+    let pokemonList = [
+    {name:"Squirtle", types: "water", height: 0.5},
+    {name:"Pikachu", types: "electric", height: 0.4},
+    {name:"Jigglypuff", types: ["fairy", "normal"], height: 0.5}
 ];
+function add (pokemon) {
+    pokemonList.push(pokemon);
+}
+function getAll() {
+    return pokemonList;
+}
+return {
+    add:add,
+    getAll: getAll
+};
+})();
 
-pokemonList.forEach(function (pokemon) {
+function printArrayDetails (i) {
 
-    if (pokemon.height < 0.5) {
-        console.log(pokemon.name + " (height: " + pokemon.height + ") - Wow, that's small!");
-        document.write(pokemon.name + " (height: " + pokemon.height + ") - Wow, that's small!"+ "<br>");
+    if (i.height < 0.5) {
+        console.log(i.name + " (height: " + i.height + ") - Wow, that's small!");
+        document.write(i.name + " (height: " + i.height + ") - Wow, that's small!"+ "<br>");
     }
     else{
-        console.log(pokemon.name + " (height: " + pokemon.height + ")");
-        document.write(pokemon.name + " (height: " + pokemon.height + ")"+ "<br>");
+        console.log(i.name + " (height: " + i.height + ")");
+        document.write(i.name + " (height: " + i.height + ")"+ "<br>");
     }
-});
+};
+
+pokemonRepository.getAll().forEach(printArrayDetails);
 
