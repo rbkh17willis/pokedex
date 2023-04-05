@@ -3,3 +3,14 @@ body{
     line-height: 2;
     font-weight: 400;
 }
+
+.pokebutton {
+
+    border: none;
+    background-color: antiquewhite;
+    color: aquamarine;
+}
+.pokebutton:focus{
+    cursor: pointer;
+    opacity: 0.8;
+}
