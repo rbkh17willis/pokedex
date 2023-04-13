@@ -14,7 +14,7 @@ function addListItem(pokemon) {
     let pokedexList = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
-    button.innerText = pokemon.pokemonName;
+    button.innerText = pokemon.name;
     button.classList.add('pokemon-name-list');
     listItem.appendChild(button);
     pokedexList.appendChild(listItem);
