@@ -4,13 +4,21 @@ body{
     font-weight: 400;
 }
 
-.pokebutton {
+.pokemon-name-list {
 
-    border: none;
-    background-color: antiquewhite;
-    color: aquamarine;
+    background-color: white;
+    color: #2b2b2b;
+    border: 2px solid rgb(20, 169, 169) ;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
 }
-.pokebutton:focus{
+.pokemon-name-list:focus{
     cursor: pointer;
     opacity: 0.8;
 }
