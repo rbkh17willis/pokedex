@@ -71,7 +71,7 @@ function showModal(pokemon) {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
     modalContainer.classList.add('modal');
-    modalCloseButton.innerHtml = '';
+    
   }
 }
 
