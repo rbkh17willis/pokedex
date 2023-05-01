@@ -1,64 +1,91 @@
-body{
-    font-size: 20px;
-    line-height: 2;
-    font-weight: 400;
+body {
+  margin: 20px;
+  padding: 10px;  
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
 }
 
-.pokemon-name-list {
-
-    background-color: white;
-    color: #2b2b2b;
-    border: 2px solid rgb(20, 169, 169) ;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
+nav {
+  background-color: #fff;
 }
-.pokemon-name-list:focus{
-    cursor: pointer;
-    opacity: 0.8;
+.navbar-brand {
+  font-size: 2rem;
 }
 
- /* Modal Styling */
- #modal-container.is-visible {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* to show it above other content */
-    z-index: 999; 
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
+.pokemon-list {
+  padding: none;
+  list-style-type: none;
+  display: flex; 
+  flex-wrap: wrap;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.list-group-item{
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
+.list-group-item:hover {
+  background-color: #f2f2f2;
+}
+
+.list-group-item img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+@media all and (max-width: 1080px) {
+
+  .pokemon-list{
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
   }
-  
-  .modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: whitesmoke;
-    padding: 15px;
-    width: 70%;
-   
-    text-align: left;
+
+  .search-list {
+      grid-template-columns: 1fr;
   }
-  
-  .modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: #777;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
+
+}
+
+ /* Modal */
+.modal-content {
+  background-color: #fff;
+}
+
+.modal-title {
+  font-size: 2rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-height {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.pokemon-image {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+}
