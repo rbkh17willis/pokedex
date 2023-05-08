@@ -17,7 +17,7 @@ let pokemonRepository = (function () {
       return pokemonList;
     }
 
-/* API and DOM */
+/* API  */
     function addListItem(pokemon) {
       //console.log('addListItem called')
       let pokemonListElement = document.querySelector(".pokemon-list");

@@ -1,91 +1,132 @@
-body {
-  margin: 20px;
-  padding: 10px;  
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
-}
 
-nav {
-  background-color: #fff;
-}
-.navbar-brand {
-  font-size: 2rem;
-}
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-.pokemon-list {
-  padding: none;
-  list-style-type: none;
-  display: flex; 
-  flex-wrap: wrap;
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 50px;
-  text-align: center;
-  justify-content: center;
-}
-
-.list-group-item{
-  display: inline-block;
+* {
+  margin: 0;
   padding: 0;
-  border: none;
-}
-.list-group-item:hover {
-  background-color: #f2f2f2;
+  box-sizing: border-box;
 }
 
-.list-group-item img {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
-  margin-right: 10px;
-}
-
-@media all and (max-width: 1080px) {
-
-  .pokemon-list{
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-  }
-
-  .search-list {
-      grid-template-columns: 1fr;
-  }
-
-}
-
- /* Modal */
-.modal-content {
-  background-color: #fff;
-}
-
-.modal-title {
-  font-size: 2rem;
-}
-
-.modal-body {
+body {
+  font-family: "VT323", monospace;
+  background-color: #e9f6fa;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.pokemon-height {
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
-
-.pokemon-image {
-  max-width: 300px;
-  max-height: 300px;
-  margin-bottom: 20px;
-}
-
-footer {
-  background-color: #ccc;
-  padding: 20px;
+h1 {
   text-align: center;
+  margin-top: 30px;
+  color: #f73030;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  text-shadow: 2px 2px #3f3f3f;
 }
 
 .btn {
+  cursor: pointer;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #f73030;
+  padding: 0.5rem 2rem;
+  width: 200px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  text-shadow: 2px 2px #3f3f3f;
+  transition: transform 0.1s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #352696;
+  color: whitesmoke;
+}
+
+.x-btn{
+  font-size: 40px;
+  
+}
+
+.logo{
+  width: 20%;
+  padding-block: 20px;
+}
+nav{
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pokemon-list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+ width: 80%;
+  
+  justify-content: space-around;
+  list-style: none;
+  
+
+}
+.pokemon-list li {
+
+  margin-bottom: 20px;
+}
+
+/*//////////////////////*/
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+
+
+#search-input {
+  color: rgb(84, 120, 212);
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #78cbe4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+#search-input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.card{
+  background-color: transparent;
 }
